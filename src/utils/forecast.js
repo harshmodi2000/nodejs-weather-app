@@ -16,8 +16,9 @@ const forecast=(long,lat,callback)=>{
             callback('Place does not exist!',undefined);
         }
         else{
-                
-            callback(undefined,res.body.daily.data[0].summary+'It is current '+res.body.currently.temperature+' degrees out. There are '+res.body.currently.precipProbability+'% chance of rain')
+               
+            callback(undefined,res.body.daily.data[0].summary+'It is current '+res.body.currently.temperature+' degrees out. There are '+res.body.currently.precipProbability+'% chance of rain. '
+            +res.body.daily.data[0].temperatureHigh+' degrees high and '+res.body.daily.data[0].temperatureLow+' degrees low temperature will be there for today.')
         }
     })
 
